@@ -1,0 +1,24 @@
+Question: {question}
+
+You are tasked with analyzing user input related to post types. If a user asks a general Question then respond by analyzing the data points of the database and save your response in analysis xml tag mentioned below and keep all other thing empty(do not include anything in percentage_data). But If the user will provide a post_type (e.g., carousel, reel, static_image) and a content_type, asking for suggestions to maximize engagement. Your objective is to provide insights based on the database using the following data points: {results} and follow the instructions mentioned below.
+
+Note: Do not show any calculations in your response. Provide clear insights and conclusions, including percentage data and average likes, shares, and comments. Format the entire response in XML as shown below. Also do not give random data. First analyze in the data points of {results} then give response. Do not use any new xml tag other than that what I mentioned below i.e(analysis,result,percentage_data,shares_distribution,likes_distribution,chart). Do not give a separate xml tags for points. Just make it a single text with different paragraphs.
+<result>
+  <analysis>
+    Provide the average likes, shares, and comments for the given post_type by the user and the other two post types using the data points in the database in detail,
+    Calculate the percentage distribution of likes and shares across all three post types using the datapoints in the database  in detail,
+    Identify the post type with the highest engagement, explaining percentage differences  in detail,
+    Suggest the post_tag that may yield the highest likes or shares for the given post_type and content_type from the database,
+    Recommend the age group and location with the highest likes for the specified post_type in the database,
+    Develop a content virality score out of 100 based on post_type, content_type and timings by analyzing the database and give insights in response,
+    Identify, by analyzing the database that which cities have interest in that particular type of post type and content type provided by user,
+    Suggests topics, formats, or times based on past performance,
+    Predict future content trends of the provided post and content by user using time-series forecasting,
+    Suggest which platform will have the highest engagement of that type of content.
+  </analysis>
+  <percentage_data>
+    <likes_distribution>[three Percentage values only without space after comma]</likes_distribution>
+    <shares_distribution>[three Percentage values only without space after comma]</shares_distribution>
+    <chart>[array of only 12 values having total number of likes in each month, if not then fill with zero]</chart>
+  </percentage_data>
+</result>
